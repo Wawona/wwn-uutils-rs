@@ -1,8 +1,8 @@
-# wwn-coreutils
+# wwn-uutils-rs
 
-[![CI](https://github.com/Wawona/wwn-coreutils/actions/workflows/ci.yml/badge.svg)](https://github.com/Wawona/wwn-coreutils/actions/workflows/ci.yml)
+[![CI](https://github.com/Wawona/wwn-uutils-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/Wawona/wwn-uutils-rs/actions/workflows/ci.yml)
 
-Wawona's vendored [uutils/coreutils](https://github.com/uutils/coreutils): the
+Wawona's vendored and patched [uutils/coreutils](https://github.com/uutils/coreutils): the
 in-process `ls`/`cat`/`cp`/... multicall used by the App-Store-compliant build
 (no `fork`/`exec`), kept in sync with the `coreutils` Cargo feature subset and
 `wwn_safe_subset[]` in `wawona-dispatch.c`.
@@ -13,12 +13,12 @@ Patch-overlay model: pristine uutils-coreutils `0.0.30` is pinned in
 ## Use
 
 ```nix
-inputs.wwn-coreutils.url = "github:Wawona/wwn-coreutils";
+inputs.wwn-uutils-rs.url = "github:Wawona/wwn-uutils-rs";
 
 # Patched source tree for the Rust backend Cargo path-dep:
-patched   = wwn-coreutils.lib.mkPatchedSrc { inherit pkgs; platform = "macos"; };
+patched   = wwn-uutils-rs.lib.mkPatchedSrc { inherit pkgs; platform = "macos"; };
 # macOS/Android multicall binary (fork/exec-allowed platforms):
-multicall = wwn-coreutils.lib.mkMulticall { inherit pkgs; };
+multicall = wwn-uutils-rs.lib.mkMulticall { inherit pkgs; };
 ```
 
 ## Standalone build

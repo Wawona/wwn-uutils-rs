@@ -1,5 +1,5 @@
 {
-  description = "wwn-coreutils: Wawona's vendored uutils-coreutils, providing the in-process ls/cat/cp/... multicall for the App-Store-compliant (no fork/exec) build, plus the patched-source builder for the Rust backend.";
+  description = "wwn-uutils-rs: Wawona's vendored and patched uutils-coreutils, providing the in-process ls/cat/cp/... multicall for the App-Store-compliant (no fork/exec) build, plus the patched-source builder for the Rust backend.";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
