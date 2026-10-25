@@ -22,5 +22,11 @@ uutils / zsh / libssh2 / fastfetch patches are expensive. Prefer less surface.
 | `patch-coreutils-source.sh` | Staticlib + `wawona_coreutils_main` only |
 | `safe-subset.txt` | Which utils Mode A may call in-process |
 
+## Pin updates
+
+The 0.0.30 pin generated 43 OSV findings across 17 packages in Wawona's
+Cargo.lock, including six high-severity advisories. The 0.12.0 pin was checked
+against the patch anchors and the macOS multicall package locally before CI.
+
 Do not grow `patch-coreutils-source.sh` for product policy. Product tool lists
 live in `safe-subset.txt` and consumer sync checks.

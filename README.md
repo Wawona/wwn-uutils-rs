@@ -16,7 +16,7 @@ or invent a second safe-subset list.
 
 | Path | Role |
 |------|------|
-| `dependencies/libs/coreutils/coreutils-src.nix` | Upstream pin (0.0.30) |
+| `dependencies/libs/coreutils/coreutils-src.nix` | Upstream pin (0.12.0) |
 | `dependencies/libs/coreutils/patch-coreutils-source.sh` | staticlib + C entry |
 | `dependencies/libs/coreutils/safe-subset.txt` | Mode A in-process util names |
 | `docs/PATCH-BUDGET.md` | How to grow (or refuse) patches |

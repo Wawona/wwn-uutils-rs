@@ -5,6 +5,6 @@
 pkgs.fetchFromGitHub {
   owner = "uutils";
   repo = "coreutils";
-  rev = "0.0.30";
-  sha256 = "sha256-OZ9AsCJmQmn271OzEmqSZtt1OPn7zHTScQiiqvPhqB0=";
+  rev = "0.12.0";
+  sha256 = "sha256-/Zi7/vh8hwniMxa+keYjW7KBeq3Xg2rqDlqyN2GOZN4=";
 }
