@@ -30,7 +30,7 @@
 
 rustPlatform.buildRustPackage {
   pname = "wawona-coreutils-multicall";
-  version = "0.0.30";
+  version = "0.12.0";
   src = coreutils-src;
 
   cargoLock = {
