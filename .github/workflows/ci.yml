@@ -19,7 +19,7 @@ jobs:
         run: grep -E 'actions/workflows/.+/badge\.svg' README.md
   eval:
     name: flake eval (instantiation)
-    runs-on: macos-15
+    runs-on: macos-27
     steps:
       - uses: actions/checkout@v5
       - uses: DeterminateSystems/nix-installer-action@main
@@ -34,7 +34,7 @@ jobs:
 
   build:
     name: build coreutils multicall
-    runs-on: macos-15
+    runs-on: macos-27
     needs: eval
     steps:
       - uses: actions/checkout@v5
